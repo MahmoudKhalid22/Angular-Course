@@ -1,0 +1,6 @@
+<app-shared>
+  <button (click)="onSelectUser()" [class.active]="selected">
+    <img [src]="'assets/users/' + user.avatar" />
+    <span>{{ user.name }}</span>
+  </button>
+</app-shared>
