@@ -1,3 +1,15 @@
 <app-places-container title="Your Favorite Places">
-  <p>Todo...</p>
+  <ul>
+    @for(place of favoritePlaces(); track place.id) {
+    <li class="place-item" (click)="onDeletePlace(place)">
+      <button>
+        <img
+          [src]="'http://localhost:3000/' + place?.image?.src"
+          [alt]="place.image.alt"
+        />
+        <h3>{{ place.title }}</h3>
+      </button>
+    </li>
+    }
+  </ul>
 </app-places-container>
